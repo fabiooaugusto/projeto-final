@@ -26,3 +26,4 @@ Before committing any changes to the codebase, it is recommended to take the fol
 
 1. Check formatting and linting with `npm run format` & `npm run lint`.
 2. Ensure that your code is properly documented and any new functionality is covered in the app's documentation and automated tests.
+3. Run `npx cz` to write your commit message.
