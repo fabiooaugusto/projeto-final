@@ -10,16 +10,16 @@ module.exports = {
 			"white": "#ffffff",
 			"orange": {
 				"lightest":"#FFEDE0",
-				"light":"#F3A46A",
+				"light":"#F3A46A"
 			},
 			"brown": {
 				"light":"#613B36",
-				"dark":"311501",
+				"dark":"#311501"
 			},
 			"gray": {
-				"light":"C1C1C1",
-				"dark":"343434",
-			}
+				"light":"#C1C1C1",
+				"dark":"#343434"
+			},
 		  },
 	},
 	plugins: [],
