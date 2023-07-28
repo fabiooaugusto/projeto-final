@@ -6,7 +6,7 @@ module.exports = {
 		'./app/**/*.{js,ts,jsx,tsx,mdx}',
 	],
 	theme: {
-		colors: {
+		colors:{
 			"white": "#ffffff",
 			"orange": {
 				"lightest":"#FFEDE0",
@@ -14,13 +14,18 @@ module.exports = {
 			},
 			"brown": {
 				"light":"#613B36",
-				"dark":"311501",
+				"dark":"#311501",
 			},
 			"gray": {
-				"light":"C1C1C1",
-				"dark":"343434",
+				"light":"#C1C1C1",
+				"dark":"#343434",
 			}
-		  },
+		},
+		fontFamily: {
+			'sans': ['Raleway', 'Arial', 'sans-serif'],
+		},
+		extend: {},
 	},
+	variants: {},
 	plugins: [],
 }
