@@ -7,9 +7,9 @@ export default function Recipe({ params }: { params: { recipeId: string } }) {
 					<h1 className="text-3xl text-white md:-ml-8">Arroz Branco:</h1>
 					<h3 className="pb-4 pt-12 text-center text-white">
 						{' '}
-						O preparo do arroz soltinho não tem mistério: basta seguir a proporção
-						e o tempo que ele dá certo. Refogado com cebola e louro, fica saboroso
-						e perfumado.
+						O preparo do arroz soltinho não tem mistério: basta seguir a
+						proporção e o tempo que ele dá certo. Refogado com cebola e louro,
+						fica saboroso e perfumado.
 					</h3>
 					<img
 						className="w-full rounded-md border-2 border-orange-light"
@@ -45,8 +45,8 @@ export default function Recipe({ params }: { params: { recipeId: string } }) {
 								mais água.
 							</li>
 							<li>
-								5.Deixe cozinhar até secar, e cheque novamente se já está cozido.
-								Desliguei o fogo, solte o arroz com um garfo e sirva.
+								5.Deixe cozinhar até secar, e cheque novamente se já está
+								cozido. Desliguei o fogo, solte o arroz com um garfo e sirva.
 							</li>
 						</div>
 					</div>
