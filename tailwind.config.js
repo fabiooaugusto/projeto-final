@@ -10,10 +10,11 @@ module.exports = {
 			"white": "#ffffff",
 			"orange": {
 				"lightest":"#FFEDE0",
-				"light":"#F3A46A",
+				"light":"#F3A46A"
 			},
 			"brown": {
 				"light":"#613B36",
+
 				"dark":"#311501",
 			},
 			"gray": {
