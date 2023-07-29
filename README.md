@@ -1,29 +1,26 @@
-# Hi there
+# Olá!
 
-This is the final project.
+Esse é o site da byronReceitas, feito para o projeto final da capacitação de tecnologia da byron.
 
-## Developing
+<p align="center">
+<img src="https://i.imgur.com/wxPLu1o.png">
+</p>
 
-Once you've installed dependencies with `npm install`, start a development server:
+## Clonar e Utilizar o projeto
 
-```bash
+Você pode clonar seu projeto com:
+```
+$ git clone https://github.com/andreunderstars/projeto-final
+```
+
+Instale as dependências com:
+
+```
+$ npm install
+```
+
+Rode o projeto com:
+
+```
 npm run dev
 ```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run start`.
-
-## Commiting
-
-Before committing any changes to the codebase, it is recommended to take the following steps:
-
-1. Check formatting and linting with `npm run format` & `npm run lint`.
-2. Ensure that your code is properly documented and any new functionality is covered in the app's documentation and automated tests.
-3. Run `npx cz` to write your commit message.
