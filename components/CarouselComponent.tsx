@@ -51,9 +51,12 @@ const CarouselComponent = () => {
 									favorito!
 								</div>
 								<div className="flex justify-center py-1">
-									<button className="rounded-lg bg-brown-light p-1 px-3 text-base text-white drop-shadow-md transition-all hover:scale-105 focus:scale-105 focus:outline-none">
+									<Link
+										href={`http://localhost:3000/recipes`}
+										className="rounded-lg bg-brown-light p-1 px-3 text-base text-white drop-shadow-md transition-all hover:scale-105 focus:scale-105 focus:outline-none"
+									>
 										Encontrar Receitas
-									</button>
+									</Link>
 								</div>
 							</div>
 						</div>
@@ -76,9 +79,12 @@ const CarouselComponent = () => {
 									favorito!
 								</div>
 								<div className="flex justify-center py-1">
-									<button className="rounded-lg bg-brown-light p-1 px-3 text-base text-white drop-shadow-md transition-all hover:scale-105 focus:scale-105 focus:outline-none">
+									<Link
+										href={`http://localhost:3000/recipes`}
+										className="rounded-lg bg-brown-light p-1 px-3 text-base text-white drop-shadow-md transition-all hover:scale-105 focus:scale-105 focus:outline-none"
+									>
 										Encontrar Receitas
-									</button>
+									</Link>
 								</div>
 							</div>
 						</div>
@@ -101,9 +107,12 @@ const CarouselComponent = () => {
 									favorito!
 								</div>
 								<div className="flex justify-center py-1">
-									<button className="rounded-lg bg-brown-light p-1 px-3 text-base text-white drop-shadow-md transition-all hover:scale-105 focus:scale-105 focus:outline-none">
+									<Link
+										href={`http://localhost:3000/recipes`}
+										className="rounded-lg bg-brown-light p-1 px-3 text-base text-white drop-shadow-md transition-all hover:scale-105 focus:scale-105 focus:outline-none"
+									>
 										Encontrar Receitas
-									</button>
+									</Link>
 								</div>
 							</div>
 						</div>
@@ -126,9 +135,12 @@ const CarouselComponent = () => {
 									favorito!
 								</div>
 								<div className="flex justify-center py-1">
-									<button className="rounded-lg bg-brown-light p-1 px-3 text-base text-white drop-shadow-md transition-all hover:scale-105 focus:scale-105 focus:outline-none">
+									<Link
+										href={`http://localhost:3000/recipes`}
+										className="rounded-lg bg-brown-light p-1 px-3 text-base text-white drop-shadow-md transition-all hover:scale-105 focus:scale-105 focus:outline-none"
+									>
 										Encontrar Receitas
-									</button>
+									</Link>
 								</div>
 							</div>
 						</div>

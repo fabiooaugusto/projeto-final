@@ -3,6 +3,7 @@ import RecipeCardBlack from '@/components/RecipeCardBlack'
 import AboutCard from '@/components/AboutCard'
 import { Recipe } from './api/recipes'
 import CarouselComponent from '@/components/CarouselComponent'
+import Link from 'next/link'
 
 async function getRecipes(): Promise<Recipe[]> {
 	const res = await fetch('http://localhost:3000/api/recipes')
@@ -22,9 +23,15 @@ export default async function Home() {
 			<section className="items-center bg-cover bg-center bg-no-repeat">
 				<CarouselComponent />
 			</section>
-			<section className="flex items-center justify-center bg-white px-3 py-16 align-middle md:px-0">
+			<section className="flex flex-col items-center justify-center gap-4 bg-white px-3 py-16 align-middle md:px-0">
+				<Link
+					href={`http://localhost:3000/recipes`}
+					className="rounded-lg bg-brown-light p-3 px-5 text-base text-white drop-shadow-md transition-all hover:scale-105 focus:scale-105 focus:outline-none md:hidden"
+				>
+					Encontrar Receitas
+				</Link>
 				<div className="flex max-w-5xl flex-wrap items-center justify-center gap-8 align-middle ">
-					{recipes.slice(0, 10).map((recipe) => {
+					{recipes.slice(0, 9).map((recipe) => {
 						return <RecipeCardBlack recipe={recipe} />
 					})}
 				</div>

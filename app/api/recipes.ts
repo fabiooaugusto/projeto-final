@@ -30,7 +30,7 @@ export const recipes: Recipe[] = [
 			'Espere esfriar, desenforme e sirva!',
 		],
 		imageUrl:
-			'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tudogostoso.com.br%2Freceita%2F309779-bolo-de-chocolate-simples.html&psig=AOvVaw3nzAqansOC2n8pc-wlGMrc&ust=1690663296185000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMDFs92hsoADFQAAAAAdAAAAABAD',
+			'https://static.itdg.com.br/images/640-400/bd14ed0d98530fb34b6f60a295382a7a/348000-original.jpg',
 	},
 	{
 		id: 2,
@@ -74,7 +74,7 @@ export const recipes: Recipe[] = [
 			'Espere esfriar, corte em pedaços e sirva.',
 		],
 		imageUrl:
-			'https://www.google.com/url?sa=i&url=https%3A%2F%2Faquelareceita.com.br%2Fbolo-de-cenoura&psig=AOvVaw1yg5WzWqfWm22D-8EgnWtL&ust=1690662960278000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOD4yLugsoADFQAAAAAdAAAAABAD',
+			'https://cdn.aquelareceita.com.br/recipes/image-1641392334286-1641924644344.png',
 	},
 	{
 		id: 4,

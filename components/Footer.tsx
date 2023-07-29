@@ -14,10 +14,18 @@ const Footer = () => {
 					</div>
 				</div>
 				<div className="grid grid-cols-2 gap-2">
-					<img className="w-5" src="/img/icon-instagram.png" alt="" />
-					<img className="w-5" src="/img/icon-youtube.png" alt="" />
-					<img className="w-5" src="/img/icon-facebook.png" alt="" />
-					<img className="w-5" src="/img/icon-twitter.png" alt="" />
+					<a href="">
+						<img className="w-5" src="/img/icon-instagram.png" alt="" />
+					</a>
+					<a href="">
+						<img className="w-5" src="/img/icon-youtube.png" alt="" />
+					</a>
+					<a href="">
+						<img className="w-5" src="/img/icon-facebook.png" alt="" />
+					</a>
+					<a href="">
+						<img className="w-5" src="/img/icon-twitter.png" alt="" />
+					</a>
 				</div>
 			</div>
 			<div>
