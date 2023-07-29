@@ -12,11 +12,7 @@ const Header = () => {
 						<img className="w-64" src="/img/Logo.png" alt="Logo do site" />
 					</div>
 				</div>
-				<div>
-					<button className="hidden text-2xl hover:underline focus:underline md:inline">
-						Encontrar Receitas
-					</button>
-				</div>
+				<div></div>
 			</div>
 		</header>
 	)
