@@ -1,14 +1,14 @@
 'use client'
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import Carousel from 'react-bootstrap/Carousel';
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.css'
+import Carousel from 'react-bootstrap/Carousel'
 import CategoryCard from '@/components/CategoryCard'
 import AboutCard from '@/components/AboutCard'
 
 export default function Home() {
 	return (
 		<main>
-			<section className="items-center bg-center bg-cover bg-no-repeat">
+			<section className="items-center bg-cover bg-center bg-no-repeat">
 				<Carousel fade>
 					<Carousel.Item interval={5000}>
 						<img
