@@ -1,7 +1,24 @@
-export default function Recipe({ params }: { params: { recipeId: string } }) {
+async function getRecipes(recipeId: string) {
+	const res = await fetch(`http://localhost:3000/api/recipes/${recipeId}`)
+
+	if (!res.ok) {
+		throw new Error('Failed to fetch data')
+	}
+
+	return res.json()
+}
+
+export default async function Recipe({
+	params,
+}: {
+	params: { recipeId: string }
+}) {
+	const recipe = await getRecipes(params.recipeId)
+
 	return (
 		<article>
 			<h2>{params.recipeId}</h2>
+			<h2>{recipe.title}</h2>
 			<div>
 				<div className="rounded-md bg-gray-dark p-2 md:m-20 md:p-16 md:pt-4 ">
 					<h1 className="text-3xl text-white md:-ml-8">Arroz Branco:</h1>

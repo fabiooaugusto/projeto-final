@@ -1,9 +1,20 @@
-'use client'
-
 import React from 'react'
 import RecipeCard from '@/components/RecipeCard'
+import { Recipe } from '../api/recipes'
 
-export default function Recipes({ children }: { children: React.ReactNode }) {
+async function getRecipes(): Promise<Recipe[]> {
+	const res = await fetch('http://localhost:3000/api/recipes')
+
+	if (!res.ok) {
+		throw new Error('Failed to fetch data')
+	}
+
+	return res.json()
+}
+
+export default async function Recipes() {
+	const recipes = await getRecipes()
+
 	return (
 		<main>
 			<div className="justify-center md:flex md:px-4 md:py-20">
@@ -19,16 +30,9 @@ export default function Recipes({ children }: { children: React.ReactNode }) {
 						</h1>
 					</div>
 					<div className="flex flex-wrap justify-evenly gap-y-6">
-						<RecipeCard />
-						<RecipeCard />
-						<RecipeCard />
-						<RecipeCard />
-						<RecipeCard />
-						<RecipeCard />
-						<RecipeCard />
-						<RecipeCard />
-						<RecipeCard />
-						<RecipeCard />
+						{recipes.map((recipe) => {
+							return <RecipeCard recipe={recipe} />
+						})}
 					</div>
 				</div>
 			</div>

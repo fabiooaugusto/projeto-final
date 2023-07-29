@@ -1,15 +1,24 @@
 import React from 'react'
+import Link from 'next/link'
+import { Recipe } from '@/app/api/recipes'
 
-const RecipeCard = () => {
+interface RecipeCardProps {
+	recipe: Recipe
+}
+
+const RecipeCard = ({ recipe }: RecipeCardProps) => {
 	return (
-		<button className="flex h-60 w-64 flex-col rounded-lg border border-white bg-white hover:border-orange-lightest hover:bg-orange-lightest focus:border-orange-lightest focus:bg-orange-lightest focus:outline-none">
+		<Link
+			href={`http://localhost:3000/recipes/${recipe.id}`}
+			className="flex w-64 flex-col overflow-hidden rounded-lg border border-white bg-white hover:border-orange-lightest hover:bg-orange-lightest focus:border-orange-lightest focus:bg-orange-lightest focus:outline-none"
+		>
 			<img
-				className="rounded-t-lg border border-b-gray-dark object-cover"
-				src="/img/rice.jpg"
+				className="h-60 w-64 rounded-t-lg border-b border-gray-dark object-cover"
+				src={recipe.imageUrl}
 				alt="Imagem da Receita"
 			/>
-			<h2 className="p-2 text-2xl/7">Título</h2>
-		</button>
+			<h2 className="p-2 text-2xl/7">{recipe.title}</h2>
+		</Link>
 	)
 }
 
