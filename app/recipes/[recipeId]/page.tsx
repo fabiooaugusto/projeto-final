@@ -2,12 +2,8 @@ import { Recipe } from '@/app/api/recipes'
 const URL_API = 'http://localhost:3000/api/recipes'
 async function getData(recipeId: string): Promise<Recipe> {
 	const res = await fetch(`http://localhost:3000/api/recipes/${recipeId}`)
-	// The return value is *not* serialized
-	// You can return Date, Map, Set, etc.
 
-	// Recommendation: handle errors
 	if (!res.ok) {
-		// This will activate the closest `error.js` Error Boundary
 		throw new Error('Failed to fetch data')
 	}
 
