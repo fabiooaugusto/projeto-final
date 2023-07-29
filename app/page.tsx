@@ -1,156 +1,32 @@
-'use client'
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.css'
-import Carousel from 'react-bootstrap/Carousel'
-import CategoryCard from '@/components/CategoryCard'
+import RecipeCardBlack from '@/components/RecipeCardBlack'
 import AboutCard from '@/components/AboutCard'
+import { Recipe } from './api/recipes'
+import CarouselComponent from '@/components/CarouselComponent'
 
-export default function Home() {
+async function getRecipes(): Promise<Recipe[]> {
+	const res = await fetch('http://localhost:3000/api/recipes')
+
+	if (!res.ok) {
+		throw new Error('Failed to fetch data')
+	}
+
+	return res.json()
+}
+
+export default async function Home() {
+	const recipes = await getRecipes()
+
 	return (
 		<main>
 			<section className="items-center bg-cover bg-center bg-no-repeat">
-				<Carousel fade>
-					<Carousel.Item interval={5000}>
-						<img
-							className="d-block h-[300px] md:h-auto"
-							src="/img/chicken.jpg"
-							alt="Image One"
-						/>
-						<Carousel.Caption>
-							<div className="hidden h-[300px] items-center justify-center md:flex">
-								<div className="flex w-full max-w-5xl items-center justify-between px-8">
-									<div className="flex h-40 w-72 flex-col gap-2 rounded bg-orange-lightest p-3 text-brown-dark drop-shadow-lg">
-										<h1 className="text-2xl font-bold">Bem-Vindo!</h1>
-										<div className="text-base font-medium">
-											Aqui na byron.receitas, você pode encontrar seu novo prato
-											favorito!
-										</div>
-										<div className="flex justify-center py-1">
-											<button className="rounded-lg bg-brown-light p-1 px-3 text-base text-white drop-shadow-md transition-all hover:scale-105 focus:scale-105 focus:outline-none">
-												Encontrar Receitas
-											</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</Carousel.Caption>
-					</Carousel.Item>
-					<Carousel.Item interval={5000}>
-						<img
-							className="d-block h-[300px] md:h-auto"
-							src="/img/penne.jpg"
-							alt="Image One"
-						/>
-						<Carousel.Caption>
-							<div className="hidden h-[300px] items-center justify-center md:flex">
-								<div className="flex w-full max-w-5xl items-center justify-between px-8">
-									<div className="flex h-40 w-72 flex-col gap-2 rounded bg-orange-lightest p-3 text-brown-dark drop-shadow-lg">
-										<h1 className="text-2xl font-bold">Bem-Vindo!</h1>
-										<div className="text-base font-medium">
-											Aqui na byron.receitas, você pode encontrar seu novo prato
-											favorito!
-										</div>
-										<div className="flex justify-center py-1">
-											<button className="rounded-lg bg-brown-light p-1 px-3 text-base text-white drop-shadow-md transition-all hover:scale-105 focus:scale-105 focus:outline-none">
-												Encontrar Receitas
-											</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</Carousel.Caption>
-					</Carousel.Item>
-					<Carousel.Item interval={5000}>
-						<img
-							className="d-block h-[300px] md:h-auto"
-							src="/img/fried-potatos.jpg"
-							alt="Image One"
-						/>
-						<Carousel.Caption>
-							<div className="hidden h-[300px] items-center justify-center md:flex">
-								<div className="flex w-full max-w-5xl items-center justify-between px-8">
-									<div className="flex h-40 w-72 flex-col gap-2 rounded bg-orange-lightest p-3 text-brown-dark drop-shadow-lg">
-										<h1 className="text-2xl font-bold">Bem-Vindo!</h1>
-										<div className="text-base font-medium">
-											Aqui na byron.receitas, você pode encontrar seu novo prato
-											favorito!
-										</div>
-										<div className="flex justify-center py-1">
-											<button className="rounded-lg bg-brown-light p-1 px-3 text-base text-white drop-shadow-md transition-all hover:scale-105 focus:scale-105 focus:outline-none">
-												Encontrar Receitas
-											</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</Carousel.Caption>
-					</Carousel.Item>
-					<Carousel.Item interval={5000}>
-						<img
-							className="d-block h-[300px] md:h-auto"
-							src="/img/pork-steak.jpg"
-							alt="Image Two"
-						/>
-						<Carousel.Caption>
-							<div className="hidden h-[300px] items-center justify-center md:flex">
-								<div className="flex w-full max-w-5xl items-center justify-between px-8">
-									<div className="flex h-40 w-72 flex-col gap-2 rounded bg-orange-lightest p-3 text-brown-dark drop-shadow-lg">
-										<h1 className="text-2xl font-bold">Bem-Vindo!</h1>
-										<div className="text-base font-medium">
-											Aqui na byron.receitas, você pode encontrar seu novo prato
-											favorito!
-										</div>
-										<div className="flex justify-center py-1">
-											<button className="rounded-lg bg-brown-light p-1 px-3 text-base text-white drop-shadow-md transition-all hover:scale-105 focus:scale-105 focus:outline-none">
-												Encontrar Receitas
-											</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</Carousel.Caption>
-					</Carousel.Item>
-					<Carousel.Item interval={5000}>
-						<img
-							className="d-block h-[300px] md:h-auto"
-							src="/img/sushi.jpg"
-							alt="Image Two"
-						/>
-						<Carousel.Caption>
-							<div className="hidden h-[300px] items-center justify-center md:flex">
-								<div className="flex w-full max-w-5xl items-center justify-between px-8">
-									<div className="flex h-40 w-72 flex-col gap-2 rounded bg-orange-lightest p-3 text-brown-dark drop-shadow-lg">
-										<h1 className="text-2xl font-bold">Bem-Vindo!</h1>
-										<div className="text-base font-medium">
-											Aqui na byron.receitas, você pode encontrar seu novo prato
-											favorito!
-										</div>
-										<div className="flex justify-center py-1">
-											<button className="rounded-lg bg-brown-light p-1 px-3 text-base text-white drop-shadow-md transition-all hover:scale-105 focus:scale-105 focus:outline-none">
-												Encontrar Receitas
-											</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</Carousel.Caption>
-					</Carousel.Item>
-				</Carousel>
+				<CarouselComponent />
 			</section>
 			<section className="flex items-center justify-center bg-white px-3 py-16 align-middle md:px-0">
 				<div className="flex max-w-5xl flex-wrap items-center justify-center gap-8 align-middle ">
-					<CategoryCard />
-					<CategoryCard />
-					<CategoryCard />
-					<CategoryCard />
-					<CategoryCard />
-					<CategoryCard />
-					<CategoryCard />
-					<CategoryCard />
-					<CategoryCard />
-					<CategoryCard />
-					<CategoryCard />
-					<CategoryCard />
+					{recipes.slice(0, 10).map((recipe) => {
+						return <RecipeCardBlack recipe={recipe} />
+					})}
 				</div>
 			</section>
 
