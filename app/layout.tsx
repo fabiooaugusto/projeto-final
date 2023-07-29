@@ -12,8 +12,8 @@ const raleway = Raleway({
 })
 
 export const metadata: Metadata = {
-	title: 'Projeto Final',
-	description: 'Projeto Final',
+	title: 'byronReceitas',
+	description: 'Um site sobre culinária',
 }
 
 export default function RootLayout({

@@ -23,8 +23,8 @@ export default async function Recipe({
 
 	return (
 		<div className="flex justify-center">
-			<div className="max-w-4xl rounded-md bg-gray-dark p-2 md:m-20 md:p-16 md:pt-4 ">
-				<h1 className="text-b mb-10 text-3xl font-bold text-white md:-ml-8">
+			<div className="w-full max-w-4xl bg-gray-dark p-2 md:m-20 md:rounded-md md:p-16 md:pt-4 ">
+				<h1 className="text-b mb-10 text-3xl font-bold text-white md:ml-8">
 					{recipe.title}
 				</h1>
 				<div className="flex justify-center ">
@@ -36,7 +36,7 @@ export default async function Recipe({
 				</div>
 				<div className="flex flex-col items-center pt-6 md:flex md:flex-row md:items-stretch">
 					<div className="mb-4 mt-4 w-full space-y-4 rounded-lg bg-orange-lightest p-2 md:mr-2 md:w-1/3">
-						<h2 className="pl-4 pt-4">Ingradiente</h2>
+						<h2 className="pl-4 pt-4">Ingredientes</h2>
 						<hr className="m-4 border-2 border-gray-light" />
 						{recipe.ingredients.map((ingredient) => {
 							return <li>{ingredient}</li>
