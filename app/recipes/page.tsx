@@ -31,7 +31,7 @@ export default async function Recipes() {
 					</div>
 					<div className="flex flex-wrap justify-evenly gap-y-6">
 						{recipes.map((recipe) => {
-							return <RecipeCard recipe={recipe} />
+							return <RecipeCard key={recipe.id} recipe={recipe} />
 						})}
 					</div>
 				</div>
