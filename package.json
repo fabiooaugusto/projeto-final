@@ -10,6 +10,8 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"dependencies": {
+		"@radix-ui/react-popover": "1.0.6",
+		"@radix-ui/react-tabs": "^1.0.4",
 		"@sefailyasoz/react-carousel": "^1.1.1",
 		"@types/node": "20.4.2",
 		"@types/react": "^18.2.15",
