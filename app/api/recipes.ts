@@ -6,7 +6,6 @@ export interface Recipe {
 	instructions: string[]
 	imageUrl: string
 }
-
 export const recipes: Recipe[] = [
 	{
 		id: 1,
@@ -490,5 +489,6 @@ export const recipes: Recipe[] = [
 		],
 		imageUrl:
 			'https://www.wikihow.com/images/thumb/e/ed/Make-Your-Own-Homemade-Cereal-Step-2-Version-2.jpg/v4-728px-Make-Your-Own-Homemade-Cereal-Step-2-Version-2.jpg',
+
 	},
 ]
